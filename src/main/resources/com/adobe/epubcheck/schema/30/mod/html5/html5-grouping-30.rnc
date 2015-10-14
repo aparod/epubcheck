@@ -69,7 +69,7 @@
    html5.table = element table { table.attlist & table.content }
    table.attlist &= html5.grouping.attrs & html5.table.border.attr?
    html5.table.border.attr = attribute border { '1' | '' }
-   table.content = (html5.caption?, html5.colgroup*, html5.thead?, 
+   table.content = (html5.caption?, (html5.colgroup* | html5.col*), html5.thead?, 
       ((html5.tfoot, ( html5.tbody* | html5.tr+ ))|(( html5.tbody* | html5.tr+ ), html5.tfoot?))) 
 
    html5.caption = element caption { html5.caption.attlist & html5.caption.content }
